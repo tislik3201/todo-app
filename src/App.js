@@ -10,7 +10,7 @@ function App() {
     const [searchValue, setSearchValue] = React.useState('')
 
     React.useEffect(() => {
-        const response = axios.get('http://localhost:3001/posts').then(({data})=>{
+        axios.get('http://localhost:3001/posts').then(({data})=>{
             setPosts(data)
         })
 
